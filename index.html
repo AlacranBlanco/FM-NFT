@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              softBlue: "hsl(215, 51%, 70%)",
+              cyan: "hsl(178, 100%, 50%)",
+              veryDarkBlueBG: "hsl(217, 54%, 11%)",
+              veryDarkBlueCard: "hsl(216, 50%, 16%)",
+              veryDarkBlueLine: "hsl(215, 32%, 27%)",
+              white: "hsl(0, 0%, 100%)",
+            },
+            fontFamily: {
+              sans: ["Outfit", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen flex justify-center items-center bg-veryDarkBlueBG">
+    <section class="shadow-2xl bg-veryDarkBlueCard p-5 rounded-2xl max-w-xs">
+      <div class="flex flex-col space-y-5">
+        <div class="relative group hover:cursor-pointer">
+          <img
+            src="./images/image-equilibrium.jpg"
+            alt="equilibrium"
+            class="rounded-lg"
+          />
+
+          <div
+            class="absolute group-hover:visible invisible duration-300 group-hover:bg-cyan/50 rounded-lg w-full h-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+          ></div>
+
+          <img
+            src="./images/icon-view.svg"
+            alt="equilibrium"
+            class="group-hover:opacity-100 opacity-0 duration-300 transition-all rounded-lg absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-10"
+          />
+        </div>
+        <div class="flex flex-col space-y-4">
+          <p
+            class="font-medium text-white text-xl antialiased hover:text-cyan hover:cursor-pointer duration-200"
+          >
+            Equilibrium #3429
+          </p>
+          <p class="text-softBlue antialiased font-[100] text-[1.1rem]">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <div class="flex justify-between">
+            <div class="flex gap-1 justify-center items-center">
+              <img src="./images/icon-ethereum.svg" class="w-3 h-4" />
+              <h3 class="text-cyan">0.041 ETH</h3>
+            </div>
+            <div class="flex gap-2 justify-center items-center">
+              <img src="./images/icon-clock.svg" class="w-4" />
+              <h3 class="text-softBlue">3 days left</h3>
+            </div>
+          </div>
+          <div class="border-t-[0.2px] border-veryDarkBlueLine"></div>
+          <div class="">
+            <div class="flex gap-4">
+              <img
+                src="./images/image-avatar.png"
+                class="w-9 border rounded-full"
+              />
+              <div class="flex items-center gap-1">
+                <p class="text-softBlue">Creation of</p>
+                <p
+                  class="text-white hover:text-cyan hover:cursor-pointer duration-200"
+                >
+                  Jules Wyvern
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 
+
+  
+
+  
+  
+  
+  Creation of Jules Wyvern -->
+  </body>
+</html>
